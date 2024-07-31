@@ -22,6 +22,8 @@ El proyecto Git consiste en un aplicativo de un programa que permita crear una c
 
 1. **Usuario** 👥: No hay roles para este programa cualquier persona puede utlizar todas las funciones disponibles.
 
+- **Menu** : Menu interactivo con el fin de poder darle acceso al usuario de interactuar con las diversas funciones del aplicativo.
+[Menu][/images/"1.png"]
 - **Crear ciudad**: Esta funcion perimite crear una ciudad con base a: Su nombre, pais al que pertenece, poblacion estimada y su codigo postal.
 - **Editar ciudad**: Esta funcion te permitira editar la informacion de la ciudad con su ID.
 - **Buscar ciudad**: Con esta funcion podras buscar la una ciudad con cualquiera de sus datos anteriores (ID, nombre, pais, poblacion, codigo postal).
