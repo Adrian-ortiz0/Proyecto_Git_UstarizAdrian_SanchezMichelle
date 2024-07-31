@@ -24,6 +24,7 @@ def crear_ciudad():
     data = leer()
     while True:
         print("Bienvenido al sistema de creacion de ciudades!")
+        print("Continua")
         identificacion = input("Ingrese el id de la ciudad: ")
         nombre = input("Ingrese el nombre de la ciudad: ")
         cp = int(input("Ingresa el codigo postal: "))
