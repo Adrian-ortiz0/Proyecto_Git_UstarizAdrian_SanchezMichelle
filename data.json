@@ -1,10 +1,16 @@
 {
-    "ciudades" : {
-        "01" : {
-            "nombre" : "medellin",
-            "codigo postal" : 65124896,
-            "poblacion" : 1800000,
-            "pais" : "colombia"
+    "ciudades": {
+        "01": {
+            "nombre": "medellin",
+            "codigo postal": 65124896,
+            "poblacion": 1800000,
+            "pais": "colombia"
+        },
+        "165": {
+            "nombre": "dfg",
+            "codigo postal": 51,
+            "poblacion": 651,
+            "pais": "dfg"
         }
     }
 }
