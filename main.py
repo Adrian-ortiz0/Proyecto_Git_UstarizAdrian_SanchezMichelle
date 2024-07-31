@@ -99,7 +99,7 @@ def buscar_ciudad():
     
     while True:
         try:
-            elec = int(input("Deseas buscar por: 1. Nombre ciudad | 2. Código postal | 3. País | 4. Salir\n"))
+            elec = int(input("Deseas buscar por: 1. Nombre ciudad | 2. Código postal | 3. País | 4. Mayor poblacion | 5. Menor poblacion | 6. Salir\n"))
             
             if elec == 1:
                 nombre_buscar = input("Ingrese el nombre de la ciudad: ").strip()
@@ -144,13 +144,48 @@ def buscar_ciudad():
                         encontrado = True
                 if not encontrado:
                     print("Ciudad no encontrada.")
-            
             elif elec == 4:
-                print("Saliendo del sistema de búsqueda...")
+                ciudad_max_poblacion = None
+                max_poblacion = -1
+                for id_ciudad, info in data["ciudades"].items():
+                    if info["poblacion"] > max_poblacion:
+                        max_poblacion = info["poblacion"]
+                        ciudad_max_poblacion = info
+                
+                if ciudad_max_poblacion:
+                    print(f"\nCiudad con la mayor población:")
+                    print(f"ID: {id_ciudad}")
+                    print(f"Nombre: {ciudad_max_poblacion['nombre']}")
+                    print(f"Código Postal: {ciudad_max_poblacion['codigo postal']}")
+                    print(f"Población: {ciudad_max_poblacion['poblacion']}")
+                    print(f"País: {ciudad_max_poblacion['pais']}\n")
+                else:
+                    print("No hay ciudades para mostrar.")
+            
+            elif elec == 5:
+                ciudad_min_poblacion = None
+                min_poblacion = 9999999999999999999999999
+                for id_ciudad, info in data["ciudades"].items():
+                    if info["poblacion"] < min_poblacion:
+                        min_poblacion = info["poblacion"]
+                        ciudad_min_poblacion = info
+                
+                if ciudad_min_poblacion:
+                    print(f"\nCiudad con la menor población:")
+                    print(f"ID: {id_ciudad}")
+                    print(f"Nombre: {ciudad_min_poblacion['nombre']}")
+                    print(f"Código Postal: {ciudad_min_poblacion['codigo postal']}")
+                    print(f"Población: {ciudad_min_poblacion['poblacion']}")
+                    print(f"País: {ciudad_min_poblacion['pais']}\n")
+                else:
+                    print("No hay ciudades para mostrar.")
+            
+            elif elec == 6:
+                print("Saliendo...")
                 break
             
             else:
-                print("Opción inválida. Por favor, ingrese un número entre 1 y 4.")
+                print("Opción inválida. Por favor, ingrese un número entre 1 y 6.")
         
         except ValueError:
             print("Entrada inválida. Por favor, ingrese un número.")
