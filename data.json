@@ -1,0 +1,10 @@
+{
+    "ciudades" : {
+        "01" : {
+            "nombre" : "medellin",
+            "codigo postal" : 65124896,
+            "poblacion" : 1800000,
+            "pais" : "colombia"
+        }
+    }
+}
