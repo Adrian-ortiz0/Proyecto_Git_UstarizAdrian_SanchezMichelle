@@ -1,5 +1,24 @@
 import json
 
+ruta = "data.json"
+
+def leer():
+    try:
+        with open(ruta, "r") as file:
+            archivo = json.load(ruta)
+            print("File readed")
+            return archivo
+    except FileNotFoundError:
+        print("File not found")
+
+def cargar():
+    try:
+        with open(ruta, "w") as file:
+            archivo = json.dump(file, ruta, indent=4)
+            print("It was readed")
+    except FileNotFoundError:
+        print("It doesent exist")
+
 def menu():
     while True:
         print("Bienvenidos")
@@ -26,4 +45,6 @@ def menu():
             print("Ingrese una opcion valida")
 
 menu()
+
+
 
