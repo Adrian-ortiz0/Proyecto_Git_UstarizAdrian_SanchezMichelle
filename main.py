@@ -33,7 +33,7 @@ def crear_ciudad():
             "nombre" : nombre,
             "codigo postal" : cp,
             "poblacion" : poblacion,
-            "pais" : pais
+            "countryss" : pais
         }
         guardar(data)
         print("Ciudad creada exitosamente")
